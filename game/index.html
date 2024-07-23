@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Allah's 99 Names</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <div class="control-item">
+        <label for="selection">Select to Learn:</label>
+        <select
+          id="selection"
+          name="selection"
+          onchange="changeSelection(this.value)"
+        >
+          <option value="99_names">99 Names of Allah</option>
+          <option value="surah_fatiha">Surah Fatiha</option>
+        </select>
+      </div>
+      <div class="controls">
+        <div class="control-item">
+          <button onclick="increaseFontSize()" class="btn">
+            Increase Font Size
+          </button>
+        </div>
+        <div class="control-item">
+          <button onclick="decreaseFontSize()" class="btn">
+            Decrease Font Size
+          </button>
+        </div>
+        <div class="control-item">
+          <button onclick="changeLanguage()" class="btn">
+            Change Language
+          </button>
+        </div>
+        <div class="control-item breakpoint-container">
+          <label for="breakpoint">Set Breakpoint:</label>
+          <input
+            type="number"
+            id="breakpoint"
+            name="breakpoint"
+            value="5"
+            min="1"
+            max="99"
+            onchange="setBreakpoint(this.value)"
+          />
+        </div>
+      </div>
+      <h1>Learn Allah's 99 Names</h1>
+      <div id="names-container">
+        <div id="sequence"></div>
+        <div id="options">
+          <button
+            class="option increasable"
+            onclick="checkAnswer(1)"
+            id="option1"
+          ></button>
+          <button
+            class="option increasable"
+            onclick="checkAnswer(2)"
+            id="option2"
+          ></button>
+          <button
+            class="option increasable"
+            onclick="checkAnswer(3)"
+            id="option3"
+          ></button>
+          <button
+            class="option increasable"
+            onclick="checkAnswer(4)"
+            id="option4"
+          ></button>
+        </div>
+      </div>
+      <div id="message" class="increasable"></div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
