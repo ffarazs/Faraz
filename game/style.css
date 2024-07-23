@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: auto; /* Allow vertical and horizontal scrolling */
+}
+
+#game-container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Set a max-width for the container */
+    max-height: 90vh; /* Set a max-height for the container */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+}
+
+h1 {
+    color: #333;
+}
+
+#names-container {
+    margin-top: 20px;
+}
+
+#sequence {
+    display: flex;
+    flex-wrap: wrap; /* Allow the sequence to wrap */
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#sequence span {
+    background: #e1f5fe;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 24px;
+    display: inline-block;
+    min-width: 100px;
+}
+
+#options {
+    display: flex;
+    flex-wrap: wrap; /* Allow options to wrap on small screens */
+    justify-content: center;
+    gap: 10px;
+}
+
+.option {
+    background: #0288d1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.option:hover {
+    background: #0277bd;
+}
+
+.btn {
+    background-color: #0277bd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0266a3;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: red;
+}
+
+.increased-font-size {
+    font-size: 28px !important; /* Adjust font size as desired */
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.control-item {
+    margin-bottom: 10px;
+}
+
+.breakpoint-container {
+    display: flex;
+    align-items: center;
+}
+
+.breakpoint-container label {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0277bd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.breakpoint-container input {
+    border: 1px solid #0277bd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 60px;
+    text-align: center;
+}
+
+#selection {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #0277bd;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    #game-container {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    .btn, .option, .breakpoint-container label {
+        font-size: 14px; /* Reduce font size on smaller screens */
+        padding: 8px 16px; /* Adjust padding for smaller buttons */
+    }
+    #sequence span {
+        font-size: 20px; /* Reduce font size for sequence elements */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
