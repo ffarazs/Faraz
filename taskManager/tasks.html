@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="taskManagerContainer">
+      <header>
+        <h1>Task Manager</h1>
+      </header>
+
+      <div id="displayTasks">
+        <h2>Tasks (Drag to Change Category)</h2>
+        <div class="category-container" id="urgentImportant">
+          <h3>Urgent & Important</h3>
+          <ul class="task-list"></ul>
+        </div>
+        <div class="category-container" id="urgentNotImportant">
+          <h3>Urgent & Not Important</h3>
+          <ul class="task-list"></ul>
+        </div>
+        <div class="category-container" id="importantNotUrgent">
+          <h3>Important & Not Urgent</h3>
+          <ul class="task-list"></ul>
+        </div>
+        <div class="category-container" id="notUrgentNotImportant">
+          <h3>Not Urgent & Not Important</h3>
+          <ul class="task-list"></ul>
+        </div>
+      </div>
+
+      <div id="addTask">
+        <h2>Add a Task</h2>
+        <label for="taskDescription">Task:</label>
+        <input
+          type="text"
+          id="taskDescription"
+          placeholder="Enter task description"
+        />
+
+        <label for="taskDeadline">Deadline:</label>
+        <input type="date" id="taskDeadline" />
+
+        <label for="taskCategory">Category:</label>
+        <select id="taskCategory">
+          <option value="urgentImportant">Urgent & Important</option>
+          <option value="urgentNotImportant">Urgent & Not Important</option>
+          <option value="importantNotUrgent">Important & Not Urgent</option>
+          <option value="notUrgentNotImportant">
+            Not Urgent & Not Important
+          </option>
+        </select>
+
+        <button id="addTaskButton">Add Task</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

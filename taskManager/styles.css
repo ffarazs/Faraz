@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#taskManagerContainer {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.category-container {
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background: #f9f9f9;
+}
+
+.category-container h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: #a31a6a;
+}
+
+.task-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.task-list li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #f3b8b8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: grab;
+}
+
+.task-list li.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+.task-list li:hover {
+    background: #eaeaea;
+}
+
+#addTask {
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+#addTask label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+#addTask input, #addTask select {
+    width: calc(100% - 2rem);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#addTask button {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#addTask button:hover {
+    background-color: #4d89c9;
+}
